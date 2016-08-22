@@ -1,0 +1,1 @@
+http://localhost:2000/v1/sms/json?email=sikalindapatrick@gmail.com&password=txd852168&phonenumber=0977642822
