@@ -14,5 +14,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Patrick Sikalinda",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Patrick1Rhode/gateway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Patrick1Rhode/gateway/issues"
+  },
+  "homepage": "https://github.com/Patrick1Rhode/gateway#readme"
 }
