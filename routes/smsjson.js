@@ -28,7 +28,7 @@ router.get("/",function(req,res){
             var sms = new Infobip("PatrickSikalinda", "udVpVmYa");
             var sender = usernamer;
             var recipients = [{ gsm: userphone, messageId : 'validity' }];
-            var msg = 'Testing'.toString('utf8');
+            var msg = messager.toString('utf8');
             var options = { text : true };
 
             sms.send(sender, msg, recipients, options, function(e, r){
