@@ -22,7 +22,8 @@ router.get("/",function(req,res){
                    
                    
                    //end
-                   var sent = {responseId : "Sent", messageSentId : "223555jjkj"};
+                   var messageID = Math.floor((Math.random() * 10) + 1);
+                   var sent = {responseId : "Sent", messageSentId : messageID};
                    //JSON.stringify(sent);
                  //sending text api
             var sms = new Infobip("PatrickSikalinda", "udVpVmYa");
