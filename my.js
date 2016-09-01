@@ -17,7 +17,7 @@ app.use("/contact",contactp);
 
 app.use("/v1/sms/json",smsjson);
 app.use("/v1/sms/xml",smsjxml);
-app.listen(2000,function(err,suc){
+app.listen(3000,function(err,suc){
     if(err){
         console.log("Server not started");
     }
