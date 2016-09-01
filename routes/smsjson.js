@@ -22,14 +22,14 @@ router.get("/",function(req,res){
                    
                    
                    //end
-                   var messageID = Math.floor((Math.random() * 1000) + 1);
+                   var messageID = Math.floor((Math.random() * 10000) + 1);
                    var sent = {responseId : "Sent", messageSentId : messageID};
                    //JSON.stringify(sent);
                  //sending text api
             var sms = new Infobip("PatrickSikalinda", "udVpVmYa");
             var sender = usernamer;
             var recipients = [{ gsm: userphone, messageId : messageID }];
-            var msg = messager+" test msg".toString('utf8');
+            var msg = "test msg".toString('utf8');
             var options = { text : true };
 
             sms.send(sender, msg, recipients, options, function(e, r){
