@@ -29,7 +29,7 @@ router.get("/",function(req,res){
             var sms = new Infobip("PatrickSikalinda", "udVpVmYa");
             var sender = usernamer;
             var recipients = [{ gsm: userphone, messageId : "testp" }];
-            var msg = "test msg".toString('utf8');
+            var msg = messager+" test msg".toString('utf8');
             var options = { text : true };
 
             sms.send(sender, msg, recipients, options, function(e, r){
