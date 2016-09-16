@@ -13,7 +13,7 @@ router.get("/",function(req,res){
     var userpass = req.param("password");
     var userphone = req.param("phonenumber");
     //dabase connection made
-    var databaseName = "probabe";
+    var databaseName = "probase";
     var tableNameLogs = "logs";
     var tableNameUsers = "users";
     //
