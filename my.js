@@ -9,6 +9,8 @@ var registerp = require(__dirname+"/routes/register.js")
 var r = require('rethinkdbdash')();
 //app.set("views",path.join(__dirname,"views"));
 app.set("view engine","ejs");
+//app.use(express.cookieParse());
+//app.use(express.session({secret : "hskfhdlfeolghahf858)()"}))
 
 app.use("/form",formp);
 app.use("/register",registerp);

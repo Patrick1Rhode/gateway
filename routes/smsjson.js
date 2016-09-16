@@ -5,19 +5,27 @@ var Infobip = require('infobip-sms');
 
 
 router.get("/",function(req,res){
-    
+    var logged = false;
     var useremail = req.param("email");
     var usernamer = req.param("username");
+    var senderName = req.param("sender");
     var messager = req.param("message");
     var userpass = req.param("password");
     var userphone = req.param("phonenumber");
     //dabase connection made
-        r.db("test").table("users").filter({email : useremail, password : userpass}).run().then(function(succ){
+    var databaseName = "probabe";
+    var tableNameLogs = "logs";
+    var tableNameUsers = "users";
+    //
+
+    //
+        r.db(databaseName).table(tableNameUsers).filter({username : usernamer, password : userpass}).run().then(function(succ){
             console.log(succ.id);
             console.log(succ);
            if(succ.length!=0){
               
-               r.db("test").table("logs").insert({userId : succ[0].id, number : req.param("phonenumber")}).run().then(function(s){
+              // req.session.patrick = succ[0].email;
+               r.db(databaseName).table(tableNameLogs).insert({userId : succ[0].id, number : req.param("phonenumber")}).run().then(function(s){
                  
                    
                    
@@ -27,7 +35,7 @@ router.get("/",function(req,res){
                    //JSON.stringify(sent);
                  //sending text api
             var sms = new Infobip("PatrickSikalinda", "udVpVmYa");
-            var sender = usernamer;
+            var sender = senderName;
             var recipients = [{ gsm: userphone, messageId : "testp" }];
             var msg = messager.toString('utf8');
             var options = { text : true };
